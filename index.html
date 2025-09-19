@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deepika | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231e2130'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='28' font-weight='700' fill='%23f3f4f6'%3EDR%3C/text%3E%3C/svg%3E">
+  
+  <meta property="og:title" content="Deepika | Portfolio">
+  <meta property="og:description" content="Software Developer and ML enthusiast building practical, impactful products.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="myphoto.jpeg">
+  <meta property="og:url" content="">
   <style>
     :root {
       --primary: #8f9dfc; /* Soft Indigo */
@@ -40,9 +47,9 @@
       border-radius: 50%;
       filter: blur(2px);
     }
-    .shape1 { width: 320px; height: 320px; background: linear-gradient(135deg, #a5b4fc 60%, #67e8f9 100%); top: -80px; left: -100px; }
-    .shape2 { width: 220px; height: 220px; background: linear-gradient(135deg, #f472b6 60%, #67e8f9 100%); top: 60vh; right: -80px; }
-    .shape3 { width: 180px; height: 180px; background: linear-gradient(135deg, #67e8f9 60%, #a5b4fc 100%); bottom: -60px; left: 60vw; }
+    .shape1 { width: 320px; height: 320px; background: linear-gradient(135deg, var(--primary) 60%, var(--secondary) 100%); top: -80px; left: -100px; }
+    .shape2 { width: 220px; height: 220px; background: linear-gradient(135deg, var(--accent) 60%, var(--secondary) 100%); top: 60vh; right: -80px; }
+    .shape3 { width: 180px; height: 180px; background: linear-gradient(135deg, var(--secondary) 60%, var(--primary) 100%); bottom: -60px; left: 60vw; }
 
     /* Blinking cursor after hero title */
     .blinking-cursor {
@@ -109,7 +116,7 @@
       image-rendering: auto;
       border: 5px solid var(--secondary);
       margin-bottom: 1.5rem;
-      box-shadow: 0 8px 32px #181f2a99;
+      box-shadow: 0 8px 32px rgba(30,33,48,0.6);
       background: #232946 url('myphoto.jpeg') center/cover no-repeat;
       display: inline-block;
       transition: transform 0.3s cubic-bezier(.4,0,.2,1);
@@ -120,7 +127,7 @@
       margin-bottom: 0.5rem;
       color: var(--primary);
       letter-spacing: -1px;
-      background: linear-gradient(90deg, #a5b4fc 30%, #67e8f9 70%);
+      background: linear-gradient(90deg, var(--primary) 30%, var(--secondary) 70%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -141,7 +148,7 @@
       background: rgba(35,41,70,0.7);
       border-radius: 12px;
       padding: 1.1rem 1.2rem;
-      box-shadow: 0 2px 12px #a5b4fc22;
+      box-shadow: 0 2px 12px rgba(143,157,252,0.13);
       display: inline-block;
     }
     .cta-btn {
@@ -153,7 +160,7 @@
       font-size: 1.15rem;
       font-weight: 700;
       cursor: pointer;
-      box-shadow: 0 4px 24px #a5b4fc22;
+      box-shadow: var(--shadow);
       transition: background 0.2s, transform 0.2s, color 0.2s;
       margin-top: 0.5rem;
       z-index: 2;
@@ -193,7 +200,7 @@
       font-size: 1.7rem;
       margin-bottom: 1.2rem;
       letter-spacing: -0.5px;
-      background: linear-gradient(90deg, #67e8f9 0%, #a5b4fc 100%);
+      background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -207,25 +214,25 @@
       gap: 1.3rem;
     }
     .project-card {
-      background: linear-gradient(120deg, #232946 0%, #181f2a 100%);
+      background: var(--gradient-card);
       border-radius: 14px;
       padding: 1.2rem 1.1rem;
-      box-shadow: 0 2px 12px #a5b4fc22;
+      box-shadow: 0 2px 12px rgba(143,157,252,0.13);
       margin-bottom: 0.5rem;
       transition: transform 0.2s, box-shadow 0.2s;
-      border: 2px solid #232946;
+      border: 2px solid var(--card);
       position: relative;
       overflow: hidden;
       animation: projectFloat 4.5s ease-in-out infinite alternate;
     }
     @keyframes projectFloat {
-      0% { transform: translateY(0) scale(1); box-shadow: 0 2px 12px #a5b4fc22; }
-      50% { transform: translateY(-8px) scale(1.015); box-shadow: 0 8px 24px #67e8f933; }
-      100% { transform: translateY(0) scale(1); box-shadow: 0 2px 12px #a5b4fc22; }
+      0% { transform: translateY(0) scale(1); box-shadow: 0 2px 12px rgba(143,157,252,0.13); }
+      50% { transform: translateY(-8px) scale(1.015); box-shadow: 0 8px 24px rgba(56,189,248,0.2); }
+      100% { transform: translateY(0) scale(1); box-shadow: 0 2px 12px rgba(143,157,252,0.13); }
     }
     .project-card:hover {
       transform: translateY(-4px) scale(1.03) rotate(-1deg);
-      box-shadow: 0 8px 32px #67e8f966;
+      box-shadow: 0 8px 32px rgba(56,189,248,0.4);
       border-color: var(--accent);
     }
     .project-title {
@@ -252,20 +259,20 @@
       margin-bottom: 0;
     }
     .skills-list span {
-      background: #181f2a;
-      color: #67e8f9;
+      background: #141826;
+      color: var(--secondary);
       border-radius: 10px;
       padding: 0.35em 0.95em;
       font-weight: 700;
-      border: 1.5px solid #232946;
+      border: 1.5px solid var(--card);
       box-shadow: 0 2px 8px #23294644;
       transition: box-shadow 0.2s, color 0.2s, border 0.2s;
       letter-spacing: 0.02em;
     }
     .skills-list span:hover {
-      box-shadow: 0 0 12px 2px #67e8f9cc, 0 2px 8px #23294644;
+      box-shadow: 0 0 12px 2px rgba(56,189,248,0.8), 0 2px 8px #23294644;
       color: #f3f4f6;
-      border: 1.5px solid #67e8f9;
+      border: 1.5px solid var(--secondary);
     }
     .contact-links a {
       color: var(--secondary);
@@ -287,7 +294,7 @@
       border-radius: 24px;
       font-weight: 700;
       text-decoration: none;
-      box-shadow: 0 4px 24px #a5b4fc22;
+      box-shadow: var(--shadow);
       transition: background 0.2s, color 0.2s, transform 0.2s;
       font-size: 1.08rem;
       border: none;
@@ -305,21 +312,21 @@
       margin-top: 0.7rem;
     }
     .fun-fact {
-      background: #181f2a;
-      color: #f472b6;
+      background: #141826;
+      color: var(--accent);
       border-radius: 10px;
       padding: 0.6em 1.2em;
       font-size: 1.05rem;
       font-weight: 700;
-      border: 1.5px solid #232946;
+      border: 1.5px solid var(--card);
       box-shadow: 0 2px 8px #23294644;
       transition: box-shadow 0.2s, color 0.2s, border 0.2s;
       letter-spacing: 0.02em;
     }
     .fun-fact:hover {
-      box-shadow: 0 0 12px 2px #f472b6cc, 0 2px 8px #23294644;
+      box-shadow: 0 0 12px 2px rgba(255,126,179,0.8), 0 2px 8px #23294644;
       color: #f3f4f6;
-      border: 1.5px solid #f472b6;
+      border: 1.5px solid var(--accent);
     }
     blockquote {
       font-size:1.13rem;
@@ -359,19 +366,19 @@
     }
     .bg-blob1 {
       width: 420px; height: 420px;
-      background: #67e8f9;
+      background: var(--secondary);
       left: -120px; top: 10vh;
       animation-delay: 0s;
     }
     .bg-blob2 {
       width: 340px; height: 340px;
-      background: #f472b6;
+      background: var(--accent);
       right: -100px; top: 40vh;
       animation-delay: 4s;
     }
     .bg-blob3 {
       width: 300px; height: 300px;
-      background: #a5b4fc;
+      background: var(--primary);
       left: 60vw; bottom: -120px;
       animation-delay: 8s;
     }
@@ -394,12 +401,10 @@
   </div>
   <header>
     <div class="profile-photo" title="Deepika's Photo"></div>
-    <div class="hero-title">Hi, I'm Deepika 👋<span class="blinking-cursor">|</span></div>
+    <div class="hero-title">Hi, I'm Deepika <span class="blinking-cursor">|</span></div>
     <div class="hero-sub">Software Developer • ML Enthusiast • Problem Solver</div>
     <div class="hero-desc">
-        I’m a CSE grad who loves turning curiosity (and coffee ☕) into functional, smart systems.
-        Always learning, always building, always curious.
-      
+        I build practical software and ML systems that solve real problems.
     </div>
     <button class="cta-btn" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">See My Work</button>
   </header>
@@ -420,7 +425,7 @@
     <section id="experience">
       <h2>Experience</h2>
       <ul>
-        <li><b>🛠 Software Dev Intern – Caze Labs (Feb–May 2025)</b><br>
+        <li><b>Software Dev Intern – Caze Labs (Feb–May 2025)</b><br>
           <ul>
             
             <li> Developed AI modules for resume parsing and candidate evaluation</li>
@@ -428,7 +433,7 @@
             <li> Tech: Python, Streamlit, OpenAI API, Azure</li>
           </ul>
         </li>
-        <li><b>🧠 ML Intern – Zephyr Tech (Oct–Nov 2023)</b><br>
+        <li><b>ML Intern – Zephyr Tech (Oct–Nov 2023)</b><br>
           <ul>
             <li> Built a diabetes prediction model with 80% accuracy</li>
             <li> Cleaned 700+ EHRs, engineered health features</li>
@@ -440,6 +445,14 @@
     <section id="projects">
       <h2>Projects</h2>
       <div class="projects-list">
+        <div class="project-card">
+          <div class="project-title">Job Market Tracker</div>
+          <div class="project-desc">An automation that tracks job postings from RSS feeds, analyzes them with AI, and emails curated opportunities. Integrated with Google Sheets for logging and custom JavaScript for data processing.</div>
+          <div class="project-stack">Stack: Zapier, JavaScript, AI by Zapier, Google Sheets, Email Automation</div>
+          <div style="margin-top:0.5em;">
+            <a href="https://github.com/Dee0216/zapier-job-alerts" target="_blank" style="color:#67e8f9;text-decoration:underline;font-weight:600;">GitHub Repo</a>
+          </div>
+        </div>
         <div class="project-card">
           <div class="project-title">Restaurant Review Assistant</div>
           <div class="project-desc">
@@ -461,42 +474,54 @@
           <div class="project-title">Diagnosify – ML Health Diagnosis Tool</div>
           <div class="project-desc">Predict UTI, PCOS, infertility using ML (up to 95.3% accuracy)<br>Used NLP to extract clinical symptoms</div>
           <div class="project-stack">Stack: Python, Flask, MySQL, NLP</div>
+          <div style="margin-top:0.5em;">
+            <!-- <a href="#" target="_blank" style="color:#67e8f9;text-decoration:underline;font-weight:600;">GitHub Repo</a> -->
+          </div>
         </div>
         <div class="project-card">
           <div class="project-title">QuizUp – Online Exam System</div>
           <div class="project-desc">Seamless online exams for teachers & students</div>
           <div class="project-stack">Stack: HTML, CSS, SQL, DBMS</div>
+          <div style="margin-top:0.5em;">
+            <a href="https://github.com/Dee0216/online-exam-system" target="_blank" style="color:#67e8f9;text-decoration:underline;font-weight:600;">GitHub Repo</a>
+          </div>
         </div>
         <div class="project-card">
           <div class="project-title">PredictCare – Disease Predictor</div>
           <div class="project-desc">Detects diabetes, Parkinson's, heart disease<br>Real-time app for health professionals</div>
           <div class="project-stack">Stack: Streamlit, Python, Pandas, ML models</div>
+          <div style="margin-top:0.5em;">
+            <a href="https://github.com/Dee0216/mutilple-disease-prediction" target="_blank" style="color:#67e8f9;text-decoration:underline;font-weight:600;">GitHub Repo</a>
+          </div>
         </div>
         <div class="project-card">
           <div class="project-title">FaceSnap – Real-Time Recognition</div>
           <div class="project-desc">Face detection from live video feed using OpenCV<br>Built for attendance & visitor management</div>
           <div class="project-stack">Stack: Python, Haar Cascades</div>
+          <div style="margin-top:0.5em;">
+            <a href="https://github.com/Dee0216/Face-Recognition-" target="_blank" style="color:#67e8f9;text-decoration:underline;font-weight:600;">GitHub Repo</a>
+          </div>
         </div>
       </div>
     </section>
     <section id="skills">
       <h2>Skills</h2>
       <div class="skills-list">
-        <span>Python</span><span>SQL</span><span>HTML</span><span>CSS</span><span>Streamlit</span><span>Flask</span><span>Pandas</span><span>OpenCV</span><span>Azure</span><span>Logistic Regression</span><span>Random Forest</span><span>SVM</span><span>Git</span><span>Jupyter</span><span>MySQL</span><span>Agile</span>
+        <span>Python</span><span>SQL</span><span>HTML</span><span>CSS</span><span>Streamlit</span><span>Zapier</span><span>LLMs</span><span>VectorDB</span><span>Flask</span><span>Pandas</span><span>OpenCV</span><span>Azure</span><span>Logistic Regression</span><span>Random Forest</span><span>SVM</span><span>Git</span><span>Jupyter</span><span>MySQL</span><span>Agile</span>
       </div>
     </section>
     <section id="contact">
       <h2>Contact</h2>
       <ul>
-        <li>🚀 Looking for opportunities in software, ML, or full-stack dev</li>
-        <li>💌 <a href="mailto:deepikamuniyor2003@gmail.com">deepikamuniyor2003@gmail.com</a></li>
-        <li>📍 Trivandrum, India</li>
+        <li>Looking for opportunities in software, ML, or full-stack dev</li>
+        <li><a href="mailto:deepikamuniyor2003@gmail.com">deepikamuniyor2003@gmail.com</a></li>
+        <li>Trivandrum, India</li>
         <li class="contact-links">
-          👩‍💻 <a href="https://github.com/Dee0216" target="_blank">GitHub</a> |
+          <a href="https://github.com/Dee0216" target="_blank">GitHub</a> |
           <a href="https://linkedin.com/in/deepika-r-82192a257" target="_blank">LinkedIn</a>
         </li>
       </ul>
-      <a class="resume-btn" href="Deepika_Resume_2025.pdf" download>📄 Download Resume</a>
+      <a class="resume-btn" href="Deepika_Resume_2025.pdf" download>Download Resume</a>
     </section>
     <section id="philosophy">
       <h2>"Why I Code"</h2>
